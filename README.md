@@ -26,6 +26,6 @@ Here a list of all the functions available:
 - <code>void setValueUsingIndex(IntVector vector, int index, int value, int *error);</code>
 - <code>void quickSort(IntVector vector, int first, int last, int *error);</code>
 - <code>void printVector(IntVector vector);</code>
-
-<br>N.B.<br>
+- 
+<br><b>N.B.</b><br>
 I suggest to handle any errors after you call one of these functions by using <code>IF_ERROR_QUIT(err_code, array)</code> or by creating your own error handle procedure using this <code>if (ERROR_OCCURED) { //do something }</code> as template.
