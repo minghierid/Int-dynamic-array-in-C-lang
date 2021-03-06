@@ -30,7 +30,7 @@ Here a list of all the functions available:
 <br><b>N.B.</b><br>
 I suggest to handle any errors after you call one of these functions by using <code>IF_ERROR_QUIT(err_code, array)</code> or by creating your own error handle procedure using this <code>if (ERROR_OCCURED) { //do something }</code> as template.
 
-<b><h2>How to use functions ?</h2><b>
+<b><h2>How to use functions ?</h2></b>
 - <code>IntVector create(int value, int *error);</code>
   <br>
   Create the array with only the first element, require the value for the first element (an integer number) and the error flag: <code>ERROR</code>.
