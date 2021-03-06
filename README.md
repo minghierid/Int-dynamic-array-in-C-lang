@@ -26,6 +26,26 @@ Here a list of all the functions available:
 - <code>void setValueUsingIndex(IntVector vector, int index, int value, int *error);</code>
 - <code>void quickSort(IntVector vector, int first, int last, int *error);</code>
 - <code>void printVector(IntVector vector);</code>
-- 
+ 
 <br><b>N.B.</b><br>
 I suggest to handle any errors after you call one of these functions by using <code>IF_ERROR_QUIT(err_code, array)</code> or by creating your own error handle procedure using this <code>if (ERROR_OCCURED) { //do something }</code> as template.
+
+<b> <h2>How to use functions ?</h2><b>
+- <code>IntVector create(int value, int *error);</code>
+  <br>
+  Create the array with only the first element, require the value for the first element (an integer number) and the error flag: <code>ERROR</code>.
+  This function generate an error if is impossible to allocate memory for the array.
+- <code>void freeAll(IntVector vector, int *error);</code>
+  <br>
+  Free all the memory used to store the array, in other words it destroy the array. Require the array name and the error flag: <code>ERROR</code>.
+  This function generate an error if is impossible to free the memory cause the array name passed to the function is <code>NULL</code>
+- <code>int getLength(IntVector vector, int *error);</code>
+- <code>int getLastIndex(IntVector vector, int *error);</code>
+- <code>IntVector addElementAt(IntVector vector, int index, int value, int *error);</code>
+- <code>IntVector removeElementAt(IntVector vector, int index, int *error);</code>
+- <code>IntVector removeLastElement(IntVector vector, int *error);</code>
+- <code>IntVector addLastElement(IntVector vector, int value, int *error);</code>
+- <code>int getValueUsingIndex(IntVector vector, int index, int *error);</code>
+- <code>void setValueUsingIndex(IntVector vector, int index, int value, int *error);</code>
+- <code>void quickSort(IntVector vector, int first, int last, int *error);</code>
+- <code>void printVector(IntVector vector);</code>
