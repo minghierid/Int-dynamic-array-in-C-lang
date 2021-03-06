@@ -38,7 +38,7 @@ I suggest to handle any errors after you call one of these functions by using <c
 - <code>void freeAll(IntVector vector, int *error);</code>
   <br>
   Free all the memory used to store the array, in other words it destroy the array. Require the array name and the error flag: <code>ERROR</code>.
-  This function generate an error if is impossible to free the memory cause the array name passed to the function is <code>NULL</code>
+  This function generate an error if is impossible to free the memory cause the array name passed to the function is <code>NULL</code>.
 - <code>int getLength(IntVector vector, int *error);</code>
   <br>
   This function return the length of the array, require the array name and the error flag: <code>ERROR</code>.
@@ -49,15 +49,16 @@ I suggest to handle any errors after you call one of these functions by using <c
   It generate an error if the array name passed is <code>NULL</code>.
 - <code>IntVector addElementAt(IntVector vector, int index, int value, int *error);</code>
   <br>
-  This function add an element (so an integer number) in the array to the element with the given index, it return the array. Require the array name, the index where you want to   insert the new element, the value for the new element and the error flag: <code>ERROR</code>. It generate an error if passed index is not valid, so if it's less than 0 or       greter than the array length (if I give an index equals to array length the new element will be added at the end of the array)
+  This function add an element (so an integer number) in the array to the element with the given index, it return the array. Require the array name, the index where you want to   insert the new element, the value for the new element and the error flag: <code>ERROR</code>. It generate an error if passed index is not valid, so if it's less than 0 or       greter than the array length (if I give an index equals to array length the new element will be added at the end of the array).
 - <code>IntVector removeElementAt(IntVector vector, int index, int *error);</code>
-  This function remove the element with the given index from the array. it return the array. Require the array name, the index of the element you want to remove and the error  flag: <code>ERROR</code>. It generate an error if passed index is not valid, so if it's less than 0, greter or equals than the array length or if the array has only one  element  (you can remove an element if the array has only one, there must be at least one element)
+  <br>
+  This function remove the element with the given index from the array. it return the array. Require the array name, the index of the element you want to remove and the error  flag: <code>ERROR</code>. It generate an error if passed index is not valid, so if it's less than 0, greter or equals than the array length or if the array has only one  element  (you can't remove an element if the array has only one, there must be at least one element).
 - <code>IntVector removeLastElement(IntVector vector, int *error);</code>
    <br>
-   Works like <code>IntVector removeElementAt(IntVector vector, int index, int *error);</code> but it remove only the last element
+   Works like <code>IntVector removeElementAt(IntVector vector, int index, int *error);</code> but it remove only the last element.
 - <code>IntVector addLastElement(IntVector vector, int value, int *error);</code>
   <br>
-  Works like <code>IntVector addElementAt(IntVector vector, int index, int value, int *error);</code> but add an element at the end of the array 
+  Works like <code>IntVector addElementAt(IntVector vector, int index, int value, int *error);</code> but add an element at the end of the array .
 - <code>int getValueUsingIndex(IntVector vector, int index, int *error);</code>
   <br>
   Return the value of the element at the given index. Require the array name, the index and the error flag: <code>ERROR</code>.
